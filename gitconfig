@@ -1,0 +1,222 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[credential]
+	helper = osxkeychain
+[user]
+	email = 134897+tri-chu@users.noreply.github.com
+	name = Tri Chu
+	signingkey = 40484B6E65BB2284
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[url "https://"]
+	insteadOf = git://
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[pull]
+	rebase = false
+[branch "xrdocinit1"]
+[branch "xrdocinit1-CS815229"]
+[branch "wwwdocs"]
+[branch "wwwdocs-CS365813"]
+[branch "wwwdocs1"]
+[branch "wwwdocs-CS717394"]
+[branch "wwwdocs-CS549204"]
+[branch "sitemap"]
+	remote = origin
+	merge = refs/heads/trichu-sitemap
+[branch "sitemap-CS835478"]
+[branch "xrdocs2"]
+[branch "xrdocs2-CS675751"]
+[branch "xrdoc1-CS926412"]
+[branch "xrdocrr"]
+[branch "wwwtest"]
+[branch "wwwtest-CS660482"]
+[branch "xrdocsrr"]
+[branch "xrdocs2-CS694791"]
+[branch "xrdoc1"]
+[branch "xrdoc1-CS540559"]
+[branch "xrdoc1-CS718350"]
+[branch "xrdoc1-CS491222"]
+[branch "xrdoc1-CS817800"]
+[branch "wwwdocs-CS384634"]
+[branch "xrdoc1-CS678693"]
+[branch "xrdoc1-CS266057"]
+[branch "xrdoc1-CS699852"]
+[branch "xrdoc1-CS960421"]
+[branch "xrdoc1-CS508497"]
+[branch "xrdoc1-CS686798"]
+[branch "xrdoc1-CS658756"]
+[branch "xrdoc1-CS132784"]
+[branch "xrdoc1-CS394782"]
+[branch "xrdoc1-CS164562"]
+[branch "xrdoc1-CS796571"]
+[branch "xrdoc1-CS721670"]
+[branch "xrdoc1-CS596944"]
+[branch "xrdoc1-CS421355"]
+[branch "xrdoc1-CS489501"]
+[branch "xrdoc1-CS890156"]
+[branch "xrdoc1-CS373339"]
+[branch "xrdoc1-CS851017"]
+[branch "xrdoc1-CS760305"]
+[branch "xrdoc1-CS739636"]
+[branch "xrdoc1-CS827092"]
+[branch "xrdoc1-CS182725"]
+[branch "xrdoc1-CS552489"]
+[branch "clean-CS958264"]
+[branch "clean1"]
+[branch "xrdoc1-CS303966"]
+[branch "xrdoc1-CS866332"]
+[branch "xrdoc1-CS886818"]
+[branch "xrdoc1-CS926371"]
+[branch "xrdoc1-CS380536"]
+[branch "xrdoc1-CS494394"]
+[branch "xrdoc1-CS179688"]
+[branch "xrdoc1-CS599361"]
+[branch "xrdoc1-CS854530"]
+[branch "xrdoc1-CS769756"]
+[branch "xrdoc1-CS644880"]
+[branch "clean2"]
+[branch "clean2-CS846416"]
+[branch "clean2-CS584880"]
+[branch "clean2-CS457618"]
+[branch "xrdoc1-CS588618"]
+[branch "clean2-CS737420"]
+[branch "xrdoc1-CS699491"]
+[branch "xrdoc1-CS144764"]
+[branch "xrdoc1-CS452274"]
+[branch "xrdoc2"]
+[branch "xrdoc1-CS905034"]
+[branch "xrdoc2-CS808245"]
+[branch "xrdoc3"]
+[branch "xrdoc3-CS955829"]
+[branch "xrdoc4"]
+[branch "xrdoc4-CS439848"]
+[branch "xrdoc4-CS179992"]
+[branch "wstart"]
+[branch "wstart-CS273827"]
+[branch "xrdoc3-CS795054"]
+[branch "xrdoc3-CS918422"]
+[branch "xrdoc4-CS157598"]
+[branch "xrdocpath"]
+[branch "xrdocpath2"]
+[branch "xrdocpath3"]
+[branch "xrdocpath4"]
+[branch "xrdocpath2-CS183119"]
+[branch "xrdocpath2-CS672892"]
+[branch "xrdoclint"]
+[branch "ac"]
+[branch "clean-CS889050"]
+[branch "clean-CS347926"]
+[branch "clean-CS833264"]
+[branch "clean-CS933736"]
+[branch "clean-CS887971"]
+[branch "transdoc"]
+[branch "transdoc-CS474731"]
+[branch "clean-CS387543"]
+[branch "transdoc-CS954617"]
+[branch "clean-CS186155"]
+[branch "transdoc1"]
+[branch "docsci"]
+[branch "transdoc-CS115372"]
+[branch "www"]
+	remote = origin
+	merge = refs/heads/trichu-www
+[branch "docdoc"]
+[branch "docdoc-CS987903"]
+[branch "clean-CS696499"]
+[branch "jpdoc"]
+[branch "jpdoc-CS848967"]
+[branch "jpdoc-CS977177"]
+[branch "lsdoc"]
+[branch "lsdoc-CS789105"]
+[branch "lsdoc-CS275099"]
+[branch "lsdoc-CS402879"]
+[branch "lsdoc-CS605137"]
+[branch "lsdoc-CS931353"]
+[branch "lsdoc-CS558722"]
+[branch "lsdoc-CS701805"]
+[branch "docsearch"]
+[branch "ardkdoc"]
+[branch "testdoc"]
+[branch "ardkdoc-CS499938"]
+[branch "ardkdoc-CS865202"]
+[branch "clean-CS382325"]
+[branch "ardkdoc-CS521228"]
+[branch "syncdoc"]
+[branch "syncdoc-CS399342"]
+[branch "ardkdoc-CS914177"]
+[branch "ardkdoc-CS113703"]
+[branch "syncdoc-CS982525"]
+[branch "syncdoc-CS988642"]
+[branch "ardkdoc-CS671322"]
+[branch "ardkdoc-CS149070"]
+[branch "syncdoc-CS790120"]
+[branch "doc2"]
+[branch "syncdoc-CS438965"]
+[branch "syncdoc-CS404833"]
+[branch "clean"]
+	remote = origin
+	merge = refs/heads/trichu-clean
+[branch "syncdoc-CS184884"]
+[branch "syncdoc-CS731694"]
+[branch "syncdoc-CS516490"]
+[core]
+	editor = code
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	a = add
+	pu = pull
+	ps = push
+[branch "syncdoc-CS801941"]
+[branch "clean-CS253776"]
+[branch "clean-CS820831"]
+[branch "clean-CS385666"]
+[branch "syncdoc-CS768015"]
+[branch "syncdoc-CS665904"]
+[branch "xrcamera"]
+[branch "xrcamera-CS843157"]
+[branch "arvrswitch"]
+	remote = origin
+	merge = refs/heads/trichu-arvrswitch
+[branch "arvrswitch-CS833828"]
+	remote = origin
+	merge = refs/heads/trichu-arvrswitch-CS833828
+[branch "arvrswitch1"]
+	remote = origin
+	merge = refs/heads/trichu-arvrswitch1
+[branch "arvrswitch2"]
+	remote = origin
+	merge = refs/heads/trichu-arvrswitch2
+[branch "doctag"]
+[branch "doctag-CS651940"]
+[branch "doctag-CS340123"]
+[branch "doctag-CS168961"]
+[branch "doctag-CS381981"]
+[branch "pdoc"]
+[branch "doctag-CS884023"]
+[branch "arvrswitch-CS157333"]
+[branch "leap"]
+	remote = origin
+	merge = refs/heads/trichu-leap
+[branch "docsync"]
+	remote = origin
+	merge = refs/heads/trichu-docsync
+[branch "docsync-CS529041"]
+	remote = origin
+	merge = refs/heads/trichu-docsync-CS529041
+[branch "lang1"]
+	remote = origin
+	merge = refs/heads/trichu-lang1
+[branch "lang1-CS146759"]
+	remote = origin
+	merge = refs/heads/trichu-lang1-CS146759
+[branch "clean-CS718654"]
+[branch "arvrswitch-CS566788"]

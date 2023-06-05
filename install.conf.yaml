@@ -2,11 +2,7 @@
     link:
       relink: true
 
-- clean: ['~', '~/.config']
-
-- link:
-    ~/.vim: vim
-    ~/.vimrc: vimrc
+- clean: ['~', '~/.config', '~/.vim', '~/.vimrc']
 
 - create:
     - ~/Downloads
@@ -15,3 +11,48 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.vimrc: vimrc
+    ~/.vim/vimrc:
+        path: vim/vimrc
+        create: true
+    ~/.zprofile: zprofile
+    ~/.zshrc: zshrc
+    ~/.Xresources: Xresources
+    ~/.config/i3:
+        path: config/i3/
+        create: true
+    ~/.config/kitty:
+        path: config/kitty/
+        create: true
+    ~/.config/nvim:
+        path: config/nvim/
+        create: true
+    ~/.config/picom:
+        path: config/picom/
+        create: true
+    ~/.config/polybar:
+        path: config/polybar/
+        create: true
+    ~/.config/ranger:
+        path: config/ranger/
+        create: true
+    ~/.config/rofi:
+        path: config/rofi/
+        create: true
+    ~/.config/whipper:
+        path: config/whipper/
+        create: true
+    ~/.config/zathura:
+        path: config/zathura/
+        create: true
+    ~/.config/autostart:
+        path: config/autostart/
+        create: true
+
+

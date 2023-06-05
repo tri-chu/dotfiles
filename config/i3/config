@@ -1,0 +1,259 @@
+# Should you change your keyboard layout some time, delete
+# this file and re-run i3-config-wizard(1).
+#
+
+# set default key to super
+set $mod Mod4
+
+# Font Settting
+font pango:'Fira Code' Medium Mono 12
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec kitty
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (program launcher)
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi drun,run -show combi"
+bindsym $mod+Shift+d exec --no-startup-id "rofi -show window"
+bindsym Mod1+Tab exec --no-startup-id "rofi -show window"
+bindsym $mod+Tab exec --no-startup-id "rofi -show window"
+
+
+# Change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+## Alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+## alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+b split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Take a screenshot upon pressing $mod+x (select an area)
+bindsym --release $mod+x exec --no-startup-id import ~/Pictures/latest-screenshot.png
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+Shift+a focus child
+
+# define workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# switch to output
+bindsym $mod+Shift+greater move workspace to output down
+bindsym $mod+Shift+less move workspace to output up
+bindsym $mod+Shift+p exec --no-startup-id "/home/$USER/.config/i3/scripts/cycle-ws.py"
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# assign program to workspace
+assign [class="steam"] $ws1
+assign [class="Steam"] $ws1
+assign [class="Code"] $ws1
+assign [class="code"] $ws1
+assign [class="google-chrome"] $ws2
+assign [class="chrome"] $ws2
+assign [class="Mozilla Firefox"] $ws2
+assign [class="mozilla firefox"] $ws2
+assign [class="firefox"] $ws2
+assign [class="Firefox"] $ws2
+assign [class="Slack"] $ws4
+assign [class="slack"] $ws4
+assign [class="Discord"] $ws4
+assign [class="discord"] $ws4
+assign [class="Element"] $ws4
+assign [class="transmission"] $ws6
+assign [class="tixati"] $ws5
+assign [class="Tixati"] $ws5
+assign [class="krusader"] $ws5
+assign [class="clementine"] $ws6
+assign [class="Clementine"] $ws6
+assign [class="clementine"] $ws6
+assign [class="Clementine"] $ws6
+assign [class="mullvad VPN"] $ws6
+assign [class="Mullvad vpn"] $ws6
+
+#########################
+######## Styling ########
+#########################
+
+# class                 border  bground text    indicator child_border
+client.focused          #FFCC66 #33415E #FFFFFF #2E9EF4   #FFCC66
+client.focused_inactive #1F2430 #1F2430 #FFFFFF #484E50   #1F2430
+client.unfocused        #1F2430 #1F2430 #888888 #292D2E   #1F2430
+client.urgent           #2F343A #FF3333 #FFFFFF #900000   #900000
+client.placeholder      #1F2430 #1F2430 #FFFFFF #000000   #0C0C0C
+
+client.background       #1F2430
+
+######## Gaps setting ########
+smart_gaps on
+smart_borders no_gaps
+gaps inner 4
+gaps outer 0
+gaps bottom 0
+bindsym $mod+g gaps inner current minus 5
+bindsym $mod+Shift+g gaps inner current plus 5
+
+for_window [class="^.*"] border pixel 3
+
+#########################
+
+############################
+###### Screen Rotate #######
+############################
+
+bindsym Ctrl+$mod+k exec "rotate" 
+bindsym Ctrl+$mod+j exec "rotate i"
+bindsym Ctrl+$mod+h exec "rotate l"
+bindsym Ctrl+$mod+l exec "rotate r"
+
+############################
+######## Screen Cap ########
+############################
+
+#bindsym --release Print exec "scrot -m  '%s_%H%M_%d%m%Y_$wx$h.png' -e 'mv $f ~/Pictures/'"
+#bindsym --release Ctrl+Print exec "scrot -u '%s_%H%M_%d%m%Y_$wx$h.png' -e 'mv $f ~/Pictures/'"
+#bindsym --release Shift+Print exec "scrot -s '%s_%H%M_%d%m%Y_$wx$h.png' -e 'mv $f ~/Pictures/'"
+#bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '~/Pictures/%s_%H%M_%d%m%Y_$wx$h.png'"
+
+##  Screenshots in files
+bindsym Print exec --no-startup-id maim --format=png "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
+bindsym $mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
+bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
+
+## Screenshots in clipboards
+bindsym Ctrl+Print exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
+
+############################
+# Screen Management        #
+############################
+
+# locking the screen
+bindsym $mod+Pause exec "~/.config/i3/scripts/runlock"
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+#####################################
+# Start up applications             #
+#####################################
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/i3/scripts/init
+
+workspace_layout default
+exec --no-startup-id dex -a -s "~/.config/autostart/"
+
+#####################################
+# LOCK SCREEN
+#####################################
+# exec --no-startup-id xautolock -time 15 -locker "~/.config/i3/scripts/blur-lock" &
+exec xset s 300 5
+exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
+
+exec --no-startup-id picom -b &
+exec --no-startup-id feh --recursive --bg-scale --randomize $HOME/Pictures/wallpapers &
