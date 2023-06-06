@@ -11,6 +11,9 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  -
+    command: git config --global --add include.path .gitconfig-common
+    description: set git config to include .gitconfig-common
 
 - link:
     ~/.bash_profile: bash_profile
