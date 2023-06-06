@@ -3,6 +3,10 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[push]
+	default = simple
+[commit]
+	gpgsign = true
 [pull]
 	rebase = false
 [core]
