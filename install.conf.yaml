@@ -11,12 +11,11 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-- clean: ['~']
 
 - link:
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
-    ~/.gitconfig: gitconfig
+    ~/.gitconfig-common: gitconfig-common
     ~/.vimrc: vimrc
     ~/.vim/vimrc:
         path: vim/vimrc
