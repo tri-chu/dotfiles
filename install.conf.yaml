@@ -33,7 +33,7 @@
         path: config/kitty/
         create: true
     ~/.config/nvim:
-        path: config/nvim/
+        path: nvim
         create: true
     ~/.config/picom:
         path: config/picom/
