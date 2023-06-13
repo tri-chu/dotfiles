@@ -1,0 +1,5 @@
+- clean: ['~']
+
+- link: 
+  ~/.zshrc: zshrc/zshrc-mac
+  ~/.bashrc: bashrc/bashrc-mac

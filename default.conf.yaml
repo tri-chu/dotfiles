@@ -16,15 +16,13 @@
     description: set git config to include .gitconfig-common
 
 - link:
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
+    ~/.bash_profile: bashrc/bash_profile
     ~/.gitconfig-common: gitconfig-common
     ~/.vimrc: vimrc
     ~/.vim/vimrc:
         path: vim/vimrc
         create: true
     ~/.zprofile: zprofile
-    ~/.zshrc: zshrc
     ~/.Xresources: Xresources
     ~/.config/i3:
         path: config/i3/
