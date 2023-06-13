@@ -1,0 +1,21 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[core]
+	editor = code
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	a = add
+	pl = pull
+	pu = push

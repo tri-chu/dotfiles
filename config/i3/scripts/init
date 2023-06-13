@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# This init script is just to setup some default parameters for X
+xset r rate 200 45
+xset s off
+xset s noblank
+xset -dpms
+xrdb -merge $HOME/.Xresources
