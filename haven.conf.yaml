@@ -1,5 +1,9 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
-- link: 
-  ~/.zshrc: zshrc/zshrc-haven
-  ~/.bashrc: bashrc/bashrc-haven
+- link:
+    ~/.zshrc: zshrc/zshrc-haven
+    ~/.bashrc: bashrc/bashrc-haven
