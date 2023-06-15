@@ -11,6 +11,13 @@ opt.modeline = false
 opt.splitbelow = true
 -- Split vertically and jump down
 opt.splitright = true
+
+-----------------------------------------------
+-- Font and Color
+-----------------------------------------------
+
+opt.termguicolors = true
+
 ---------------------
 -- Searching related
 ---------------------
