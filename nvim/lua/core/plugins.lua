@@ -34,6 +34,17 @@ return require('packer').startup(function(use)
     use 'mhinz/vim-signify'
     use 'tpope/vim-fugitive'
 
+    -- Syntax highlight
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({
+                with_sync = true
+            })
+            ts_update()
+        end
+    }
+
     ---------------
     -- Aesthetics
     ---------------
@@ -41,7 +52,7 @@ return require('packer').startup(function(use)
     -- Tree view
     use {
         'nvim-tree/nvim-tree.lua',
-        requires = {'nvim-tree/nvim-web-devicons'},
+        requires = {'nvim-tree/nvim-web-devicons'}
     }
 
     use 'lukas-reineke/indent-blankline.nvim'
