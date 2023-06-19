@@ -7,3 +7,5 @@
 - link:
     ~/.zshrc: zshrc/zshrc-haven
     ~/.bashrc: bashrc/bashrc-haven
+    ~/.zprofile: zprofile
+    ~/.Xresources: Xresources

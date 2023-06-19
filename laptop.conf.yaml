@@ -1,0 +1,9 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zshrc/zshrc-laptop
+    ~/.bashrc: bashrc/bashrc-laptop

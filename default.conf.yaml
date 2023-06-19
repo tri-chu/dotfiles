@@ -22,8 +22,6 @@
     ~/.vim/vimrc:
         path: vim/vimrc
         create: true
-    ~/.zprofile: zprofile
-    ~/.Xresources: Xresources
     ~/.config/i3:
         path: config/i3/
         create: true
