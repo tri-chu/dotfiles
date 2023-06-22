@@ -12,12 +12,6 @@ opt.splitbelow = true
 -- Split vertically and jump down
 opt.splitright = true
 
------------------------------------------------
--- Font and Color
------------------------------------------------
-
-opt.termguicolors = true
-
 ---------------------
 -- Searching related
 ---------------------
@@ -48,9 +42,10 @@ opt.updatetime = 500 -- milliseconds
 opt.number = true
 
 -----------------------------------------------
--- Cursor stuff
+-- Font, Color, and Cursor stuff
 -----------------------------------------------
 
+opt.termguicolors = true
 opt.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175'
 
 -----------------------------------------------
