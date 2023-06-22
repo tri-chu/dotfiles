@@ -48,6 +48,16 @@ opt.number = true
 opt.termguicolors = true
 opt.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175'
 
+if vim.fn.has("gui_running") then
+    if g.os == "Darwin" then
+        g.guifont = "Cascadia Code:h12"
+    elseif g.os == "Linux" then
+        g.guifont = "Cascadia Code 10"
+    elseif g.os == "Windows" then
+        g.guifont = "Cascadia_Code:h12:cANSI"
+    end
+end
+
 -----------------------------------------------
 -- Indent and space
 -----------------------------------------------
