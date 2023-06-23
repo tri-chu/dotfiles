@@ -19,6 +19,9 @@
     ~/.bash_profile: bashrc/bash_profile
     ~/.gitconfig-common: gitconfig-common
     ~/.vimrc: vimrc
+    ~/bin:
+        path: bin
+        create: true
     ~/.vim/vimrc:
         path: vim/vimrc
         create: true
