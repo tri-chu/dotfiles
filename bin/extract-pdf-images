@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+find . -type f -exec sh -c 'mkdir "${0%.pdf}"; pdfimages -j -png "{}" "${0%.pdf}/"' {} \;

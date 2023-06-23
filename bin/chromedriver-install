@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# chromedriver
+# Must correspond to the Chrome Browser version installed
+# https://chromedriver.chromium.org/downloads
+# Both chromedriver and Chrome must be in your PATH.
+
+echo "Try to downlad and install needed chromedriver version"
+chromedriver_base_url='https://chromedriver.storage.googleapis.com/'
+echo $chromedriver_base_url
+chromedriver_package='chromedriver_linux64.zip'
+echo $chromedriver_package
+chrome_version=$(`which google-chrome-stable`  --version|grep -Po '[0-9]{2}'|head -n1)
+echo "google chrome version: $chrome_version"
+chromedriver_page=$(echo ${chrome_version} |\
+  curl -v https://chromedriver.chromium.org/downloads 2>&1 |\
+  grep -Po "(https://chromedriver.storage.googleapis.com/index.html\?path=[0-9]{2,3}\.[0-9.\/]*)"|
+  head -n1)
+echo $chromedriver_page
+chromedriver_version=$(echo $chromedriver_page|sed -e 's/.*path=//g')
+echo $chromedriver_version
+chromedriver_link=${chromedriver_base_url}${chromedriver_version}${chromedriver_package}
+echo "Downloading and installing ${chromedriver_link}"
+# download and install
+#sudo wget -qO- $(chromedriver_link) | tar -xvf - -C /usr/local/bin/
+cd /tmp/ \
+ && wget ${chromedriver_link}  \
+ && unzip chromedriver_linux64.zip \
+ && sudo  mv chromedriver /usr/local/bin/
+
+if [ ! -x /usr/local/bin/chromedriver ]
+then
+  echo "Fallback download and install needed chromedriver version"
+  cd /tmp/ \
+   && wget 'https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip' \
+   && unzip chromedriver_linux64.zip \
+   && sudo mv chromedriver /usr/lobal/bin/
+fi
+

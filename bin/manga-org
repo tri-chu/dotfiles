@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+# move all doujinshi/manga chapter of the form `(comic) [author name] file name` into `author name/filename`
+
+verbose=false ;
+comma=false ;
+market=false ;
+detox=false ;
+
+while getopts 'cvm' flag; do
+  case "${flag}" in
+    c) comma=true ;;
+    v) verbose=true ;;
+    m) market=true ;;
+    s) detox=true ;;
+    *) print_usage
+       exit 1 ;;
+  esac
+done
+
+files="*.*"
+group=1
+
+if $comma; then
+    regex="\(?([^,]*)\)?,.*"
+else
+    regex="^\[([^]\[]*)\]\s?.*"
+fi
+
+if $market; then
+    regex="^(\([^(\)]*\)\s*)?\[([^]\[]*)\]\s?.*"
+    group=2
+fi
+
+for f in $files    # unquoted in order to allow the glob to expand
+do
+    if [[ $f =~ $regex ]]
+    then
+        if $detox
+        then
+            raw="${BASH_REMATCH[$group]}"
+            name="$(echo $raw | tr -c '[:alnum:][()[]]' ' ')"
+        else
+            name="${BASH_REMATCH[$group]}"
+        fi
+        echo "${name}"    # concatenate strings
+        mkdir -p "${name}"
+        mv -f "$f" "${name}/$f"
+    else
+        if $verbose; then
+            echo "$f doesn't match" >&2 # this could get noisy if there are a lot of non-matching files
+        fi
+    fi
+done
+
+

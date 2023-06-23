@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# verify all zip files in current path
+
+DIR=$1
+output=zip-check.log
+
+for f in $DIR/**/*.zip
+do
+    unzip -t $f; ec=$?
+    if $ec != 0; then
+        echo $f >> $output
+    fi
+done

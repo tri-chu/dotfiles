@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+message=$(git log -n 1 --format=format:"%B")
+
+pat="^\[g8\] save.*$|^Rebase [a-z0-9]+ onto [a-f0-9]+$"
+if [[ "$message" =~ $pat ]]
+then
+  git reset --soft HEAD~1 &> /dev/null
+  message=$(git log -n 1 --format=oneline)
+  echo "Popped back to: $message"
+else
+  echo "On top of: $message"
+fi
+
+~/bin/atroot git reset &> /dev/null

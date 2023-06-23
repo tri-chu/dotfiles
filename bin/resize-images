@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for image in * ;
+do
+    convert "$image" -resize 3200x\> "$image-x3200" ;
+done

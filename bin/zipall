@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# package all zip files in current path
+
+if (( $OPTIND == 1 )); then
+  echo "zipping all"
+  for i in */; do zip -0 -r "${i%/}.zip" "$i" & done; wait
+fi
+
+while getopts ":x" opt; do
+  case "${opt}" in
+    x) echo "unzipping all"; for i in *.zip; do unzip -d "${i%.*}" "$i" & done; wait ;;
+    \?) echo "Invalid option: -$OPTARG" >&2; exit 1 ;;
+  esac
+done

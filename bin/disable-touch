@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+xinput --list | egrep -io "elan touchscreen.+id=([0-9]+)" | awk '{split($0,a,"="); print a[2]}' | xargs xinput disable

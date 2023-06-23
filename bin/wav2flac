@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+for i in *.wav
+do
+    flac --keep-foreign-metadata "$i" -o "${i%.wav}.flac" 
+    mid3cp "$i" "${i%.wav}.flac"
+done
+wait

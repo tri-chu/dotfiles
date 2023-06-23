@@ -1,0 +1,33 @@
+#!/usr/bin/env python
+import i3
+import argparse
+from Xlib import X, display
+from Xlib.ext import randr
+import os
+
+parser = argparse.ArgumentParser(description='Rotate current screen')
+parser.add_argument('direction', nargs='?', choices=['l', 'r', 'i', 'n', 'left', 'right', 'invert', 'normal'], default='n')
+args = parser.parse_args()
+
+# figure out what is on, and what is currently on your screen.
+focused_workspace = list(filter(lambda s: s['focused'], i3.get_workspaces()))[0]
+outputs = list(filter(lambda s: s['active'], i3.get_outputs()))
+
+# find the index of the currently focused workspace
+currentIndex = 0
+output = next(o for o in outputs if o['name'] == focused_workspace['output'])
+
+command = "xrandr --output {output} --rotate {orientation}"
+if args.direction == 'l' or args.direction == 'left':
+    print(command.format(output=output['name'], orientation='left'))
+    os.system(command.format(output=output['name'], orientation='left'))
+elif args.direction == 'r' or args.direction == 'right':
+    print(command.format(output=output['name'], orientation='right'))
+    os.system(command.format(output=output['name'], orientation='right'))
+elif args.direction == 'i' or args.direction == 'invert':
+    print(command.format(output=output['name'], orientation='inverted'))
+    os.system(command.format(output=output['name'], orientation='inverted'))
+else:
+    print(command.format(output=output['name'], orientation='normal'))
+    os.system(command.format(output=output['name'], orientation='normal'))
+

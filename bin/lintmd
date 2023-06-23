@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+files="./book*/*.md"
+for f in $files    # unquoted in order to allow the glob to expand
+do
+  temp="$(mktemp)"
+  fold -w 100 -s "$f" > "$temp"
+  mv -f "$temp" "$f"
+done
+markdownlint -f book*

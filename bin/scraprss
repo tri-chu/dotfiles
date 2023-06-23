@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+source $HOME/.virtualenvs/scrapper/bin/activate
+cd $HOME/src/scrapper
+make
+deactivate

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+verbose=false ;
+comma=false ;
+
+while getopts 'cv' flag; do
+  case "${flag}" in
+    c) comma=true ;;
+    v) verbose=true ;;
+    *) print_usage
+       exit 1 ;;
+  esac
+done
+
+files="*.*"
+
+if $comma; then
+    regex="\(?([^,]*)\)?,.*"
+else
+    regex="^\[([^]\[]*)\]\s?.*"
+fi
+
+for f in $files    # unquoted in order to allow the glob to expand
+do
+    if [[ $f =~ $regex ]]
+    then
+        name="${BASH_REMATCH[1]}"
+        echo "${name}"    # concatenate strings
+        mkdir -p "${name}"
+        mv -f "$f" "${name}/$f"
+    else
+        if $verbose; then
+            echo "$f doesn't match" >&2 # this could get noisy if there are a lot of non-matching files
+        fi
+    fi
+done
+
+

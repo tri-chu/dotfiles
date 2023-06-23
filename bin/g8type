@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+g8 diff | grep -E ":[^ ]"

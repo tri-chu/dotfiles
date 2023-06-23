@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# This script rotates the current active screen and touch screen
+# based on script by Ruben Barkow-Kuder: https://gist.github.com/rubo77/daa262e0229f6e398766
+
+if [ "$1" = "--help"  ] || [ "$1" = "-h"  ] ; then
+echo 'Usage: rotate-screen.sh [OPTION]'
+echo
+echo Usage:
+echo ' -h --help display this message'
+echo ' -r turn orientation right'
+echo ' -l turn orientation left'
+echo ' -i turn orientation inverted'
+echo ' -n (or no options) rotates the screen back to normal'
+exit 0
+fi
+
+#### configuration
+# find your Touchscreen device with `xinput`
+TouchscreenDevice="$(xrandr |grep eDP|cut -d" " -f1)"
+
+if [ "$1" == "-i" ]; then
+  echo "Upside down"
+  xrandr --output "$TouchscreenDevice" --rotate inverted
+elif [ "$1" == "-l" ]; then
+  echo "90° to the left"
+  xrandr --output "$TouchscreenDevice" --rotate left
+elif [ "$1" == "-r" ]; then
+  echo "90° to the right"
+  xrandr --output "$TouchscreenDevice" --rotate right
+else
+  echo "Back to normal"
+  xrandr --output "$TouchscreenDevice" --rotate normal
+fi
+

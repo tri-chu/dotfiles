@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+for chapter in *.xhtml;do;pandoc --atx-headers --columns=100 -f html -t gfm -o ${chapter/xhtml/md} ${chapter};done

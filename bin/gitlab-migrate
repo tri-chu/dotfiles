@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Migrate an 8th Wall GitHub repo to a Niantic GitLab origin. Run from your repo directory.
+#
+# Example Usage
+# $ ./migrate-repos-to-github.sh tools8 website8 docbox8
+
+set -e
+
+REPO_DIR_DEFAULT=/Users/${USER}/repo
+
+read -p "Specify 'repo' parent directory [${REPO_DIR_DEFAULT}]: " repo_dir
+
+repo_dir=${repo_dir:-$REPO_DIR_DEFAULT}
+cd $repo_dir
+
+for repo in $@; do
+  echo -n "Migrating origin from github.com/8thwall/${repo} to gitlab.nianticlabs.com/niantic-ar/8w/${repo} ... "
+  cd $repo
+  git remote set-url origin https://gitlab.nianticlabs.com/niantic-ar/8w/${repo}.git
+  git config user.name "${USER}"
+  git config user.email "${USER}@nianticlabs.com"
+  echo "done"
+done

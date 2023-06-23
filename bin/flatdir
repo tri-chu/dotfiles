@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+for src in */*/; do
+    dst=${src/\/}
+    echo mkdir "$dst"
+    mkdir "$dst"
+    echo mv "$src"* "$dst"
+    mv "$src"* "$dst"
+done
+
+find . -type d -empty -delete
