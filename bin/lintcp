@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+cp -r ~/repo/code8/package.json  \
+~/repo/code8/eslint-local-rules.js \
+~/repo/code8/node_modules \
+~/repo/code8/rules \
+~/repo/code8/.eslintrc.js \
+~/repo/niantic
