@@ -18,6 +18,7 @@
 - link:
     ~/.bash_profile: bashrc/bash_profile
     ~/.gitconfig-common: gitconfig-common
+    ~/.zshenv: zshenv
     ~/.vimrc: vimrc
     ~/bin:
         path: bin
