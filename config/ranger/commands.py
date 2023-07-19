@@ -6,14 +6,15 @@
 
 # A simple command for demonstration purposes follows.
 # -----------------------------------------------------------------------------
+
 from __future__ import (absolute_import, division, print_function)
+from ranger_udisk_menu.mounter import mount
 
 # You can import any python module as needed.
 import os
 
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
-from plugins.ranger_udisk_menu.mounter import mount
 
 
 # Any class that is a subclass of "Command" will be integrated into ranger as a
@@ -61,7 +62,7 @@ class my_edit(Command):
         # content of the current directory.
         return self._tab_directory_content()
 
-# Copied from https://github.com/ranger/ranger/wiki/Custom-Commands#fzf-integration
+# fzf integration
 class fzf_select(Command):
     """
     :fzf_select
@@ -121,4 +122,3 @@ class fzf_select(Command):
                 self.fm.cd(selected)
             else:
                 self.fm.select_file(selected)
-
