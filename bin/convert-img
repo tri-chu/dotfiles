@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+filename="$1"
+echo "converting $filename to png"
+convert "$filename" "${filename%.*}.png"
