@@ -1,0 +1,9 @@
+[virt_db]
+Item_/=virt:/Search results 1,virt:/Search results 3,virt:/Search results 5
+Item_Search results 1=smb://tric@192.168.1.16/tric-home/Anime/[Coalgirls]_Monogatari_Series_Second_Season_(1920x1080_Blu-ray_FLAC)/,smb://tric@192.168.1.16/tric-home/Anime/[Commie] Nekomonogatari (Black) [BD 1080p AAC]/,smb://tric@192.168.1.16/tric-home/Anime/[Coalgirls]_Owarimonogatari_(1280x720_Blu-ray_FLAC)/,smb://tric@192.168.1.16/tric-home/Anime/[ANE] Bakemonogatari [BDRip 1080p x264 FLAC]/,smb://tric@192.168.1.16/tric-home/Anime/[Sajamba] Koyomimonogatari (BD 1280x720 x264 AAC)v2/,smb://tric@192.168.1.16/tric-home/Anime/[Coalgirls]_Tsukimonogatari_(1920x1080_Blu-ray_FLAC)/,smb://tric@192.168.1.16/tric-home/Anime/[Coalgirls]_Nisemonogatari_(1920x1080_Blu-ray_FLAC)/
+Item_Search results 3=smb://tric@192.168.1.16/tric-home/Anime/[BlurayDesuYo] Under the Dog - 00 (BD 1920x1080 10bit FLAC)/,smb://tric@192.168.1.16/tric-home/Anime/[Hiryuu] Dog Days [BD Hi10P 1280x720 AAC]/,smb://tric@192.168.1.16/tric-home/Anime/[HorribleSubs] Dog Days S3/,smb://tric@192.168.1.16/tric-home/Anime/[FFF] Dog Days S2 [BD][720p-AAC]/
+Item_Search results 5=smb://tric@192.168.1.16/tric-home/Anime/[Coalgirls]_Nisekoi_Second_Season_(1920x1080_Blu-ray_FLAC)/,smb://tric@192.168.1.16/tric-home/Anime/[Coalgirls]_Nisekoi_(1920x1080_Blu-ray_FLAC)/,smb://tric@192.168.1.16/tric-home/Anime/[Coalgirls]_Nisekoi_OVA_(720x480_DVD_AAC)/
+MetaInfo_/=
+MetaInfo_Search results 1=Search results for "gatari" in smb://tric@192.168.1.16/tric-home/Anime
+MetaInfo_Search results 3=Search results for "dog" in smb://tric@192.168.1.16/tric-home/Anime
+MetaInfo_Search results 5=Search results for "nisekoi" in smb://tric@192.168.1.16/tric-home/Anime

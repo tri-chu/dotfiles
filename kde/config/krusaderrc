@@ -1,0 +1,158 @@
+First Time=false
+Version=2.4.0-beta3
+
+[Advanced]
+AutoMount=true
+
+[Archives]
+Supported Packers=tar,gzip,bzip2,lzma,xz,unzip,zip,cpio,unrar,rar,dpkg,7z
+
+[Dependencies]
+7z=/usr/bin/7z
+bzip2=/bin/bzip2
+checksum utility=/usr/bin/md5sum
+cpio=/bin/cpio
+dpkg=/usr/bin/dpkg
+gzip=/bin/gzip
+kdesu=/usr/lib/kde4/libexec/kdesu
+krename=/usr/bin/krename
+krusader=/usr/bin/krusader
+locate=/usr/bin/locate
+lzma=/usr/bin/lzma
+mailer=/usr/bin/thunderbird
+md5sum=/usr/bin/md5sum
+mount=/bin/mount
+rar=/usr/bin/rar
+sha1sum=/usr/bin/sha1sum
+sha224sum=/usr/bin/sha224sum
+sha256sum=/usr/bin/sha256sum
+sha384sum=/usr/bin/sha384sum
+sha512sum=/usr/bin/sha512sum
+tar=/bin/tar
+thunderbird=/usr/bin/thunderbird
+umount=/bin/umount
+unrar=/usr/bin/unrar
+unzip=/usr/bin/unzip
+updatedb=/usr/bin/updatedb
+xz=/usr/bin/xz
+zip=/usr/bin/zip
+
+[Konfigurator]
+Window Height=680
+Window Maximized=false
+Window Width=900
+
+[KrInterDetailedView]
+AutoResizeColumns=false
+Saved State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x04\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t®\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x05\x00\x00\x00\x00\t\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00dˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\t\x00\x00\x03µ\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00P\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00y\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00Q\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00
+
+[KrViewerWindow]
+Window Height=-1
+Window Maximized=false
+Window Width=-1
+
+[Private]
+Height 1440=1441
+Maximized=true
+PopularUrls=krarc:/media/tri/firefly/Firefly/Download/porn/English/(C87) [Jingai Makyou (Inue Shinsuke)] Elichika\\, Ouchi ni Kaesanai. - Elichika You Won't Go Home. (Love Live!) [English].zip/,file:///media/tri/firefly/Firefly/Download/game/,virt:/Search results 5/,virt:/Search results 5/,smb://tric@192.168.1.16/tric-home/Anime/[HorribleSubs] Dog Days S3/,smb://tric@192.168.1.16/tric-home/Anime/,smb://tric@192.168.1.16/tric-home/Anime/[FFF] DATE A LIVE II [BD][1080p-FLAC]/,smb://tric@192.168.1.16/tric-home/Anime/[FFF] Dog Days S2 [BD][720p-AAC]/,file:///media/tri/firefly/Firefly/Download/porn/English/,virt:/Search results 3/,smb://tric@192.168.1.16/tric-home/,virt:/,virt:/Search results 1/,virt:/Search results 1/,smb://tric@192.168.1.16/tric-home/hentai/h-manga-pack/,file:///media/tri/firefly/Firefly/Download/hentai/,smb://tric@192.168.1.16/tric-home/hentai/H-Manga_Single_Chapter/,smb://tric@192.168.1.16/tric-home/hentai/h-manga-pack/SaHa/,smb://tric@192.168.1.16/tric-home/hentai/raw-manga/,smb://tric@192.168.1.16/tric-home/hentai/h-manga-pack/LWB/LWB/,smb://tric@192.168.1.16/tric-home/hentai/raw-doujin/ComicMarket/C91/C91_Doujin_Pack_20/,smb://tric@192.168.1.16/tric-home/hentai/,file:///media/tri/firefly/Firefly/Download/porn/,smb://tric@192.168.1.16/tric-home/raw-manga/,file:///media/tri/firefly/Firefly/Download/,file:///media/tri/firefly/Firefly/Download/temp/,file:///media/tri/firefly/Firefly/Download/temp/doujin/,file:///media/tri/firefly/Firefly/Download/temp/raw-hmanga/,file:///media/tri/firefly/Firefly/Download/manga/,krarc:/media/tri/firefly/Firefly/Download/temp/raw-hmanga/Haruyukiko_-_Koki_Taoshi_Kemono_Onee-san.rar/
+PopularUrlsRank=19,17,14,12,10,9,4,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Start Position=55,14
+Start Size=2495,1388
+Width 2560=2561
+cmdline history=
+
+[Protocols]
+Handled Protocols=tar,krarc,iso
+Mimes For iso=application/x-cd-image
+Mimes For krarc=application/zip,application/x-xz,application/x-rpm,application/x-rar,application/x-lha,application/x-cpio,application/x-arj,application/x-ace,application/x-7z-compressed
+Mimes For tar=application/x-xz-compressed-tar,application/x-tarz,application/x-tar,application/x-compressed-tar,application/x-bzip-compressed-tar
+
+[QueueManager]
+Active=0
+Queues=default
+Window Height=400
+Window Width=300
+Window X=20
+Window Y=20
+
+[Search]
+ContainsText Completion=
+ContainsText History=
+Feed To Listbox Counter=6
+SearchFor Completion=dieppe,dog,typeg,tenshi,gatari,nisekoi
+SearchFor History=nisekoi,dog,gatari,tenshi,typeg,dieppe
+Window Height=646
+Window Maximized=false
+Window Width=1029
+
+[Search][ResultView]
+AutoResizeColumns=false
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00ˇˇˇˇ\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t®\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x03ı\x00\x00\x00\t\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00dˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\t\x00\x00\x02ﬁ\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00P\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00y\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00
+ShowPreviews=false
+Sort Column=-1
+
+[Startup]
+Left Side Is Active=false
+Show Cmd Line=true
+Show FN Keys=true
+Show Terminal Emulator=false
+Show actions tool bar=true
+Show status bar=true
+Show tool bar=true
+Splitter Sizes=1245,1244
+Start To Tray=false
+UI Save Settings=true
+Vertical Mode=false
+
+[Startup][Left Tab Bar]
+ActiveTab=0
+
+[Startup][Left Tab Bar][Tabs][Tab0]
+Properties=0
+Type=0
+Url=/media/tri/firefly/Firefly/Download/porn/English
+
+[Startup][Left Tab Bar][Tabs][Tab0][History]
+CurrentIndex=0
+CurrentItems=..,[ANE] Ore no Imouto ga Konna ni Kawaii Wake ga Nai [BDRip 720p x264 Hi10p Vorbis],..,[HorribleSubs] Dog Days S3,..,dot Hack Roots,[FFF] Dog Days S2 - ED01 [BD][720p-AAC][29DC7854].mkv,[FFF] Dog Days S2 [BD][720p-AAC],..,[FFF] DATE A LIVE II [BD][1080p-FLAC],..,[FFF] Dog Days S2 [BD][720p-AAC],..
+Entrys=file:///media/tri/firefly/Firefly/Download/porn/English,smb://tric@192.168.1.16/tric-home/Anime,smb://tric@192.168.1.16/tric-home/Anime/%5BHorribleSubs%5D%20Dog%20Days%20S3,smb://tric@192.168.1.16/tric-home/Anime,smb://tric@192.168.1.16/tric-home/Anime/%5BHorribleSubs%5D%20Dog%20Days%20S3,smb://tric@192.168.1.16/tric-home/Anime,smb://tric@192.168.1.16/tric-home/Anime/%5BFFF%5D%20Dog%20Days%20S2%20%5BBD%5D%5B720p-AAC%5D,smb://tric@192.168.1.16/tric-home/Anime,smb://tric@192.168.1.16/tric-home/Anime/%5BFFF%5D%20DATE%20A%20LIVE%20II%20%5BBD%5D%5B1080p-FLAC%5D,smb://tric@192.168.1.16/tric-home/Anime,smb://tric@192.168.1.16/tric-home/Anime/%5BFFF%5D%20Dog%20Days%20S2%20%5BBD%5D%5B720p-AAC%5D,smb://tric@192.168.1.16/tric-home/Anime,smb://tric@192.168.1.16/tric-home/Anime/%5BFFF%5D%20Dog%20Days%20S2%20%5BBD%5D%5B720p-AAC%5D
+
+[Startup][Left Tab Bar][Tabs][Tab0][View]
+AutoResizeColumns=false
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t®\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x074\x00\x00\x00\t\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00dˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\t\x00\x00\x05õ\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00I\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00n\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00∂\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00,\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00
+ShowPreviews=false
+Sort Column=0
+
+[Startup][Right Tab Bar]
+ActiveTab=0
+
+[Startup][Right Tab Bar][Tabs][Tab0]
+Properties=0
+Type=0
+Url=/media/tri/firefly/Firefly/Download/porn/English
+
+[Startup][Right Tab Bar][Tabs][Tab0][History]
+CurrentIndex=0
+CurrentItems=[Nozarashi Satoru] Kissa Hitozuma Nikudorei - Married Meat Slave Cafe [English] [H-Konbini].zip,..,(C87) [Jingai Makyou (Inue Shinsuke)] Elichika\\, Ouchi ni Kaesanai. - Elichika You Won't Go Home. (Love Live!) [English].zip,English,porn,..,..,doujin,temp,..,hentai,..,..
+Entrys=file:///media/tri/firefly/Firefly/Download/porn/English,krarc:/media/tri/firefly/Firefly/Download/porn/English/(C87)%20%5BJingai%20Makyou%20(Inue%20Shinsuke)%5D%20Elichika\\,%20Ouchi%20ni%20Kaesanai.%20-%20Elichika%20You%20Won't%20Go%20Home.%20(Love%20Live!)%20%5BEnglish%5D.zip,file:///media/tri/firefly/Firefly/Download/porn/English,file:///media/tri/firefly/Firefly/Download/porn,file:///media/tri/firefly/Firefly/Download,file:///media/tri/firefly/Firefly/Download/temp,file:///media/tri/firefly/Firefly/Download/temp/doujin,file:///media/tri/firefly/Firefly/Download/temp,file:///media/tri/firefly/Firefly/Download,file:///media/tri/firefly/Firefly/Download/hentai,file:///media/tri/firefly/Firefly/Download,file:///media/tri/firefly/Firefly/Download/temp,file:///media/tri/firefly/Firefly/Download/temp/raw-hmanga
+
+[Startup][Right Tab Bar][Tabs][Tab0][View]
+AutoResizeColumns=false
+Descending Sort Order=512
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t®\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x05\x00\x00\x00\x00\t\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00dˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\t\x00\x00\x03µ\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00P\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00y\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00Q\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00
+ShowPreviews=false
+Sort Column=2
+
+[ViewerModule]
+FirstRun=false
