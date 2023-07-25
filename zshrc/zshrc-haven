@@ -14,22 +14,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# virtualenvwrapper settings:
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-
-source $HOME/.local/bin/virtualenvwrapper.sh
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export rvmsudo_secure_path=1
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PATH=$PATH:"$HOME/bin":"$HOME/.local/bin":"$HOME/.virtualenvs"
-
 export PATH="$HOME/.cargo/bin:/usr/local/go/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -144,8 +128,6 @@ export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# TODO (tri) import credential for GOOGLE
 
 # Sourcing bashmarks
 source $HOME/bin/bashmarks.sh
