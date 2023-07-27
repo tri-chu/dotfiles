@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/tri/.pyenv/versions/3.10.2/envs/default/bin/python
 import i3
 import argparse
 from Xlib import X, display

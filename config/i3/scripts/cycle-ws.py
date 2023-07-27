@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/tri/.pyenv/versions/3.10.2/envs/default/bin/python
 
 # cycle-workspace
 #   Moves the currently active workspace to the next active display
