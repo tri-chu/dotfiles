@@ -2,7 +2,7 @@
 Type=Application
 Version=1.0
 Name=element-desktop
-Comment=element-desktopstartup script
-Exec=/opt/Element/element-desktop
+Comment=element-desktop startup script
+Exec=flatpak run im.riot.Riot
 StartupNotify=false
 Terminal=false
