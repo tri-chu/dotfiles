@@ -49,6 +49,13 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 ####################
+# Python Stuff
+####################
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+####################
 # Console LS colors
 ####################
 
@@ -85,7 +92,7 @@ export LS_COLORS
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bazel git aliases alias-finder thefuck tmux)
+plugins=(bazel git aliases alias-finder thefuck tmux poetry)
 
 source $ZSH/oh-my-zsh.sh
 
