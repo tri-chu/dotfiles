@@ -129,6 +129,7 @@ assign [class="Mozilla Firefox"] $ws2
 assign [class="mozilla firefox"] $ws2
 assign [class="firefox"] $ws2
 assign [class="Firefox"] $ws2
+assign [class="Firefox-esr"] $ws2
 assign [class="Slack"] $ws4
 assign [class="slack"] $ws4
 assign [class="Discord"] $ws4
