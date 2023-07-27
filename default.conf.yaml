@@ -41,6 +41,9 @@
     ~/.config/picom:
         path: config/picom/
         create: true
+    ~/.config/dunst:
+        path: config/dunst/
+        create: true
     ~/.config/polybar:
         path: config/polybar/
         create: true
