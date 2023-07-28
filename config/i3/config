@@ -23,6 +23,19 @@ bindsym $mod+Shift+d exec --no-startup-id "rofi -show window"
 bindsym Mod1+Tab exec --no-startup-id "rofi -show window"
 bindsym $mod+Tab exec --no-startup-id "rofi -show window"
 
+##################
+# MARK MANAGEMENT
+##################
+
+# read 1 character and mark the current window with this character
+bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+
+# read 1 character and go to the window with the character
+bindcode $mod+49 exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+
+##################
+# FOCUS
+##################
 
 # Change focus
 bindsym $mod+h focus left
