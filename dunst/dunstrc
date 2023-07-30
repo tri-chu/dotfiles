@@ -8,7 +8,7 @@
     separator_height = 0
     padding = 8
     horizontal_padding = 8
-    frame_width = 3
+    frame_width = 0
     separator_color = foreground
     sort = yes
     corner_radius = 8
@@ -25,19 +25,16 @@
     #close_all = mod4+space
 
 [urgency_low]
-    background = "#212733"
-    foreground = "#fdcc5f"
-    frame_color = "#fdcc5f"
+    background = "#1f2430"
+    foreground = "#fafafa"
     timeout = 5
 
 [urgency_normal]
-    background = "#212733"
-    foreground = "#6d7479"
-    frame_color = "#6d7479"
+    background = "#1f2430"
+    foreground = "#5CCFE6"
     timeout = 5
 
 [urgency_critical]
-    background = "#212733"
-    foreground = "#ec7171"
-    frame_color = "#ec7171"
+    background = "#1f2430"
+    foreground = "#f28779"
     timeout = 5
