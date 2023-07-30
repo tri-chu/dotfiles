@@ -125,3 +125,4 @@ export NVM_DIR="/home/tri/.nvm"
 workon py36
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
