@@ -143,3 +143,4 @@ if [ -f '/home/tric/.netlify/helper/path.bash.inc' ]; then source '/home/tric/.n
 export GTK_IM_MODULES=ibus
 export XMODIFIERS=@IM=ibus
 export QT_IM_MODULES=ibus
+. "$HOME/.cargo/env"
