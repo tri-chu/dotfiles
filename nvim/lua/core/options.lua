@@ -84,3 +84,9 @@ opt.mouse = 'a'
 
 -- Suppress netrw history
 g.netrw_dirhistmax = 0
+
+-----------------------------------------------
+-- Language and Syntax
+-----------------------------------------------
+opt.spelllang = 'en_us'
+opt.spell = true
