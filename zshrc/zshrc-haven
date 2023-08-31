@@ -118,7 +118,7 @@ alias o=xdg-open
 alias icat="kitty +kitten icat"
 alias vim=nvim
 alias bzl=bazel
-alias sudo=doas
+#alias sudo=doas
 
 # enable gpg tty
 export GPG_TTY=$(tty)
