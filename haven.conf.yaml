@@ -10,3 +10,7 @@
     ~/.bashrc: bashrc/bashrc-haven
     ~/.zprofile: zprofile
     ~/.Xresources: Xresources
+    ~/.vimrc: vimrc
+    ~/.vim/vimrc:
+        path: vim/vimrc
+        create: true

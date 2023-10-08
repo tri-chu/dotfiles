@@ -7,3 +7,7 @@
 - link: 
     ~/.zshrc: zshrc/zshrc-mac
     ~/.bashrc: bashrc/bashrc-mac
+    ~/.vimrc: vimrc
+    ~/.vim/vimrc:
+        path: vim/vimrc
+        create: true
