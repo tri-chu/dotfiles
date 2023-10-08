@@ -18,7 +18,6 @@
 - link:
     ~/.bash_profile: bashrc/bash_profile
     ~/.gitconfig-common: gitconfig-common
-    ~/.zshenv: zshenv
     ~/.kde/share/config:
         path: kde
         create: true

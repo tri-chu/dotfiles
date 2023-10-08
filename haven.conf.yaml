@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.zshenv: zshrc/zshenv
     ~/.zshrc: zshrc/zshrc-haven
     ~/.bashrc: bashrc/bashrc-haven
     ~/.zprofile: zprofile
