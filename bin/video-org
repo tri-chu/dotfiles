@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+for i in *
+do
+    if [ -f "$i" ]; then
+        FILENAME="${i%%.*}"
+        mkdir "$FILENAME"
+        echo "moving [$i] into [$FILENAME]"
+        mv "$i" "$FILENAME"
+    fi
+done
+wait
+
+
