@@ -2,3 +2,5 @@
 for f in *\|*; do mv "$f" "$(echo "$f" | sed 's/|//g')"; done
 for f in *\"*; do mv "$f" "$(echo "$f" | sed 's/"//g')"; done
 for f in *\:*; do mv "$f" "$(echo "$f" | sed 's/://g')"; done
+for f in *\?*; do mv "$f" "$(echo "$f" | sed 's/?//g')"; done
+for f in *\./; do mv "$f" "$(echo "$f" | sed 's/\.//g')"; done
