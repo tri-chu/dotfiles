@@ -259,6 +259,8 @@ bindsym $mod+r mode "resize"
 #####################################
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# setup default layout
+exec_always --no-startup-id $HOME/.screenlayout/default.sh
 exec_always --no-startup-id ~/.config/i3/scripts/init
 
 workspace_layout default
