@@ -13,3 +13,6 @@
     ~/.vim/vimrc:
         path: vim/vimrc
         create: true
+    ~/.screenlayout/default.sh:
+        path: screenlayout/haven.sh
+        create: true
