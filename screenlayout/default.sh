@@ -1,1 +1,0 @@
-/home/tri/src/dotfiles/screenlayout/haven.sh
