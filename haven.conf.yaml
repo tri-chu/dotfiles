@@ -9,6 +9,9 @@
     ~/.zshrc: zshrc/zshrc-haven
     ~/.bashrc: bashrc/bashrc-haven
     ~/.Xresources: Xresources
+    ~/.xprofile:
+        path: screenlayout/haven.sh
+        create: true
     ~/.vimrc: vimrc
     ~/.vim/vimrc:
         path: vim/vimrc
