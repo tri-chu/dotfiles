@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
  
-rsync -a --size-only --append-verify --inplace --stats --progress --partial-dir=/tmp/rsync-partial --exclude ".sync/" "$1" "$2"
+rsync -a --size-only --inplace --stats --progress --partial-dir=/tmp/rsync-partial --exclude ".sync/" "$1" "$2"
