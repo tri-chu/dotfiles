@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-rsync -A --no-perms -a --size-only --stats --progress \
+rsync -a --size-only --stats --progress \
+    --no-perms \
     --partial-dir=/tmp/rsync-partial \
     -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
     --exclude ".sync/" \
