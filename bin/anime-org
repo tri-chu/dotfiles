@@ -4,7 +4,7 @@ for i in *
 do
     if [ -f "$i" ]; then
         FILENAME="${i%%.*}"
-        dirname="$(echo $FILENAME | sed 's/^\[.*]\s(.*)\s-.*/\1/g')"
+        dirname="$(echo $FILENAME | sed 's/\[.*]\s\(.*\)\s-.*/\1/g')"
         mkdir "$dirname"
         echo "moving [$i] into [$dirname]"
         mv "$i" "$dirname"
