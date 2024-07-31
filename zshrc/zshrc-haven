@@ -118,6 +118,7 @@ alias o=xdg-open
 alias icat="kitty +kitten icat"
 alias vim=nvim
 alias bzl=bazel
+alias neofetch=fastfetch
 
 # enable gpg tty
 export GPG_TTY=$(tty)
