@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+for i in */
+do
+  FILENAME="${i%%.*}"
+  dirname="$(echo $FILENAME | sed 's/\[.*]\s\(.*\),.*/\1/g')"
+  mkdir "$dirname"
+  echo "moving [$i] into [$dirname]"
+  mv "$i" "$dirname"
+done
+wait
