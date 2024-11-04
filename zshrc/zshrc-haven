@@ -149,3 +149,10 @@ eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 pyenv activate default
 
+
+# bun completions
+[ -s "/home/tri/.bun/_bun" ] && source "/home/tri/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
