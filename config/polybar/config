@@ -58,6 +58,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = date
+modules-right =  xkeyboard alsa memory cpu eth battery
 wm-restack = i3
 
 cursor-click = pointer
