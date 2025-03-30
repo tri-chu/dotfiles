@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-rsync -a --size-only --stats --progress \
-    --no-perms \
-    --partial-dir=/tmp/rsync-partial \
-    -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
-    --exclude ".sync/" \
-    "/media/tri/spider/Spider/calibre/" \
-    "tchu@yotsuba:~/books/"
