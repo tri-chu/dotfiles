@@ -18,16 +18,11 @@
 - link:
     ~/.bash_profile: bashrc/bash_profile
     ~/.gitconfig-common: gitconfig-common
-    ~/.zshenv: zshenv
     ~/.kde/share/config:
         path: kde
         create: true
-    ~/.vimrc: vimrc
     ~/bin:
         path: bin
-        create: true
-    ~/.vim/vimrc:
-        path: vim/vimrc
         create: true
     ~/.config/i3:
         path: config/i3/

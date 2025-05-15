@@ -5,7 +5,17 @@
 - clean: ['~']
 
 - link:
+    ~/.zshenv: zshrc/zshenv
     ~/.zshrc: zshrc/zshrc-haven
     ~/.bashrc: bashrc/bashrc-haven
-    ~/.zprofile: zprofile
     ~/.Xresources: Xresources
+    ~/.xprofile:
+        path: screenlayout/haven.sh
+        create: true
+    ~/.vimrc: vimrc
+    ~/.vim/vimrc:
+        path: vim/vimrc
+        create: true
+    ~/.screenlayout/default.sh:
+        path: screenlayout/haven.sh
+        create: true

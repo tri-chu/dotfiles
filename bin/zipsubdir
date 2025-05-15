@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+for i in */
+do
+  cd "$i"
+  zipall
+  cd ..
+done
+wait

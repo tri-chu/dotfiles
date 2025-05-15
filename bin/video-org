@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+for i in *
+do
+    if [ -f "$i" ]; then
+        FILENAME="${i%%.*}"
+        CLEANNAME="${FILENAME/-poster}"
+        mkdir "$CLEANNAME"
+        echo "moving [$i] into [$CLEANNAME]"
+        mv "$i" "$CLEANNAME"
+    fi
+done
+wait
+
+

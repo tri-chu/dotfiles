@@ -1,3 +1,6 @@
 #! /usr/bin/env bash
 
-for chapter in *.xhtml;do;pandoc --atx-headers --columns=100 -f html -t gfm -o ${chapter/xhtml/md} ${chapter};done
+for chapter in *.xhtml
+do
+    pandoc --markdown-headings=atx --columns=100 -f html -t gfm -o ${chapter/xhtml/md} ${chapter}
+done

@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+
+# Fail if return code isn't 0. 
+# Parameter 1 is the return code
+# Para. 2 is text to display on failure.
+check_errs() {
+  if [ "${1}" -ne "0" ]; then
+    echo "ERROR # ${1} : ${2}"
+    exit ${1}
+  fi
+}
+
+normalize() {
+    dir=$1
+    dir=`dirname $dir`
+    pushd $dir > /dev/null
+    dir=`pwd`
+    popd > /dev/null 2>&1
+    fname=`basename $1`    
+    echo "$dir/$fname"
+}
+
+#Show help and quit.
+myhelp() {
+    echo "USAGE: tgz2zip wonderland.tgz [middle-earth.tar.bzip2]" >&2
+    exit 0
+}
+
+while getopts :h OPTION
+do
+    case $OPTION in
+        h) myhelp
+            ;;
+        \?) echo "Illegal option -- $OPTARG" >&2
+            exit -1
+            ;;
+    esac
+done
+
+if [ "$1" == "" ]
+then
+    myhelp
+fi
+
+for infile in "$@"
+do
+    unpackdir="$(mktemp -d -t 2zip.XXXXXX)"
+    trap "rm -rf '$unpackdir'" EXIT INT HUP TERM
+
+    echo "transforming ${infile} to zip" >&2
+    case "$infile" in
+         *.tgz)
+            tar -C "$unpackdir" -xzf "$infile" >/dev/null
+            check_errs $?
+            outfile=${infile%.tgz}  
+            ;;
+        *.tar.gz)
+            tar -C "$unpackdir" -xzf "$infile" >/dev/null
+            check_errs $?
+            outfile=${infile%.tar.gz}
+            ;;
+        *.tar)
+            tar -C "$unpackdir" -xf "$infile" >/dev/null
+            check_errs $?
+            outfile=${infile%.tar}
+            ;;
+        *.tar.bzip2)
+            tar -C "$unpackdir" -xjf "$infile" >/dev/null 
+            check_errs $?
+            outfile=${infile%.tar.bzip2}
+            ;;
+        *.rar)
+            7z x "$infile" -O"$unpackdir" >/dev/null 
+            check_errs $?
+            outfile=${infile%.rar}
+            ;;
+        *)
+            echo "Unrecognized input format" >&2
+            exit -1
+            ;;
+    esac
+    outfile=`normalize $outfile`
+    
+    outfile="${outfile}.zip"
+
+    if [ -e $outfile ] ; then
+        echo "Overwriting $outfile" >&2
+        rm "$outfile"
+    fi
+    
+    pushd "$unpackdir" > /dev/null
+    zip -r "$outfile" . > /dev/null
+    check_errs $?
+    popd > /dev/null
+    # rm $infile
+    check_errs $?
+    rm -rf "$unpackdir"
+done

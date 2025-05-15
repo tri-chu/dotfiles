@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+rsync -a --size-only --stats --progress \
+    --no-perms \
+    --partial-dir=/tmp/rsync-partial \
+    -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+    --exclude ".sync/" \
+    "/media/tri/firefly/Firefly/Download/steam-backups/" \
+    "tchu@nino:/mnt/main/data/games/steam-backups"
