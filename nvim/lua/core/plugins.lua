@@ -69,7 +69,7 @@ require('pckr').add{
 
     {
         'akinsho/bufferline.nvim',
-        tag = "v3.*",
+        -- tag = "v3.*",
         requires = 'nvim-tree/nvim-web-devicons'
     };
 
