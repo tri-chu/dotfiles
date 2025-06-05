@@ -23,7 +23,7 @@ export PATH="$HOME/.cargo/bin:/usr/local/go/bin:/$HOME/go/bin:$PATH"
 if [[ -n $SSH_CONNECTION ]]; then
   ZSH_THEME="steeef"
 else
-  ZSH_THEME="passion"
+  ZSH_THEME="bullet-train"
 fi
 
 # Set list of themes to pick from when loading at random
@@ -52,8 +52,8 @@ HYPHEN_INSENSITIVE="true"
 # Console LS colors
 ####################
 
-LS_COLORS=$LS_COLORS:"ow=1;34;40"
-export LS_COLORS
+# LS_COLORS=$LS_COLORS:"ow=1;34;40"
+# export LS_COLORS
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
