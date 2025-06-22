@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+
+# Remove characters
+# < (less than)
+# > (greater than)
+# : (colon - sometimes works, but is actually NTFS Alternate Data Streams)
+# " (double quote)
+# / (forward slash)
+# \ (backslash)
+# | (vertical bar or pipe)
+# ? (question mark)
+# * (asterisk)
 for f in *\|*; do mv "$f" "$(echo "$f" | sed 's/|//g')"; done
 for f in *\"*; do mv "$f" "$(echo "$f" | sed 's/"//g')"; done
 for f in *\:*; do mv "$f" "$(echo "$f" | sed 's/://g')"; done
@@ -6,4 +17,6 @@ for f in *\?*; do mv "$f" "$(echo "$f" | sed 's/?//g')"; done
 for f in *\./; do mv "$f" "$(echo "$f" | sed 's/\.//g')"; done
 for f in *\<*; do mv "$f" "$(echo "$f" | sed 's/<//g')"; done
 for f in *\>*; do mv "$f" "$(echo "$f" | sed 's/>//g')"; done
+
+
 
