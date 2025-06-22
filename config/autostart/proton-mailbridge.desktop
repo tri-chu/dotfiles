@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/usr/bin/flatpak run ch.protonmail.protonmail-bridge
+Exec=/usr/bin/flatpak run ch.protonmail.protonmail-bridge --no-window
 Name=Proton Mail Bridge
 Comment=mail bridge for proton
 Type=Application
