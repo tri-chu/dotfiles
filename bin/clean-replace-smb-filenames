@@ -11,6 +11,7 @@
 # ? (question mark)
 # * (asterisk)
 for f in *\|*; do mv "$f" "$(echo "$f" | sed 's/|/∣/g')"; done
+for f in *\**; do mv "$f" "$(echo "$f" | sed 's/*/⁎/g')"; done
 for f in *\"*; do mv "$f" "$(echo "$f" | sed 's/"/ˮ/g')"; done
 for f in *\:*; do mv "$f" "$(echo "$f" | sed 's/:/⁚/g')"; done
 for f in *\?*; do mv "$f" "$(echo "$f" | sed 's/?/ʔ/g')"; done
