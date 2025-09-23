@@ -54,7 +54,7 @@ require('pckr').add{
     ---------------
 
     'christoomey/vim-titlecase';
-    'junegunn/goyo.vim';
+    -- 'junegunn/goyo.vim';
     'rhysd/vim-grammarous';
 
     ---------------
