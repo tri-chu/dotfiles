@@ -148,6 +148,8 @@ assign [class="slack"] $ws4
 assign [class="Discord"] $ws4
 assign [class="discord"] $ws4
 assign [class="Element"] $ws4
+assign [class="Mail"] $ws4
+assign [class="thunderbird-esr"] $ws4
 assign [class="transmission"] $ws6
 assign [class="tixati"] $ws5
 assign [class="Tixati"] $ws5
@@ -269,7 +271,8 @@ exec --no-startup-id dex -a -s "~/.config/autostart/"
 #####################################
 # LOCK SCREEN
 #####################################
-# exec --no-startup-id xautolock -time 15 -locker "~/.config/i3/scripts/blur-lock" &
+exec --no-startup-id xautolock -time 15 -locker "~/.config/i3/scripts/runlock" &
+
 exec xset s 300 5
 exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
 

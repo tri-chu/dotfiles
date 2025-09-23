@@ -7,7 +7,7 @@ while getopts 'cv' flag; do
   case "${flag}" in
     c) comma=true ;;
     v) verbose=true ;;
-    *) print_usage
+    *) echo "script usage: manga-org [-c] [-v]" >&2
        exit 1 ;;
   esac
 done

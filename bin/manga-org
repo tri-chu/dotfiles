@@ -7,13 +7,13 @@ comma=false ;
 market=false ;
 detox=false ;
 
-while getopts 'cvm' flag; do
+while getopts 'cvms' flag; do
   case "${flag}" in
     c) comma=true ;;
     v) verbose=true ;;
     m) market=true ;;
     s) detox=true ;;
-    *) print_usage
+    *) echo "script usage: manga-org [-c] [-v] [-m] [-s]" >&2
        exit 1 ;;
   esac
 done
