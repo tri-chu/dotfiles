@@ -187,3 +187,6 @@ export PATH=$VCPKG_ROOT:$PATH
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# Android Command line Tools
+export PATH="$PATH:/opt/homebrew/share/android-commandlinetools"
