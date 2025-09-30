@@ -170,7 +170,7 @@ export GPG_TTY=$(tty)
 export PATH="/opt/homebrew/opt/crowdin@3/bin:$PATH"
 
 # Set crowdin secret
-export $(grep -v '^#' ~/.c8/crowdin.env | xargs)
+#export $(grep -v '^#' ~/.c8/crowdin.env | xargs)
 
 # fnm
 export PATH="/Users/trichu/Library/Application Support/fnm:$PATH"
@@ -185,3 +185,5 @@ source ~/xrhome/bin/activate
 export VCPKG_ROOT="$HOME/repo/vcpkg"
 export PATH=$VCPKG_ROOT:$PATH
 
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
