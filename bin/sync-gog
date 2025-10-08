@@ -5,5 +5,5 @@ rsync -a --size-only --stats --progress \
     --partial-dir=/tmp/rsync-partial \
     -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
     --exclude ".sync/" \
-    "/media/tri/spider/Spider/calibre/" \
-    "tchu@nino:/mnt/main/data/books/calibre"
+    "/media/tri/firefly/Firefly/Download/gog-backups/" \
+    "tchu@nino:/mnt/main/data/games/gog-backups"

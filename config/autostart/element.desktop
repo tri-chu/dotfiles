@@ -3,6 +3,6 @@ Type=Application
 Version=1.0
 Name=element-desktop
 Comment=element-desktop startup script
-Exec=flatpak run im.riot.Riot
+Exec=/usr/bin/element-desktop
 StartupNotify=false
 Terminal=false

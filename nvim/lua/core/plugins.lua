@@ -1,41 +1,46 @@
-local ensure_packer = function()
-    local fn = vim.fn
-    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-    if fn.empty(fn.glob(install_path)) > 0 then
-        fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-        vim.cmd [[packadd packer.nvim]]
-        return true
-    end
-    return false
+local function bootstrap_pckr()
+  local pckr_path = vim.fn.stdpath("data") .. "/pckr/pckr.nvim"
+
+  if not (vim.uv or vim.loop).fs_stat(pckr_path) then
+    vim.fn.system({
+      'git',
+      'clone',
+      "--filter=blob:none",
+      'https://github.com/lewis6991/pckr.nvim',
+      pckr_path
+    })
+  end
+
+  vim.opt.rtp:prepend(pckr_path)
 end
 
-local packer_bootstrap = ensure_packer()
+bootstrap_pckr()
 
-return require('packer').startup(function(use)
+require('pckr').add{
     -- Self manage packer
-    use 'wbthomason/packer.nvim'
+    'wbthomason/packer.nvim';
 
     -- Search modal
-    use {
+    {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
         requires = {{'nvim-lua/plenary.nvim'}, {
             'nvim-telescope/telescope-fzf-native.nvim',
             run = 'make'
         }}
-    }
+    };
 
     -- Basic stuff
-    use 'tpope/vim-surround'
-    use 'tpope/vim-commentary'
-    use 'tpope/vim-repeat'
+    'tpope/vim-surround';
+    'tpope/vim-commentary';
+    'tpope/vim-repeat';
 
     -- Source Code Management
-    use 'mhinz/vim-signify'
-    use 'tpope/vim-fugitive'
+    'mhinz/vim-signify';
+    'tpope/vim-fugitive';
 
     -- Syntax highlight
-    use {
+    {
         'nvim-treesitter/nvim-treesitter',
         run = function()
             local ts_update = require('nvim-treesitter.install').update({
@@ -43,38 +48,50 @@ return require('packer').startup(function(use)
             })
             ts_update()
         end
-    }
+    };
+    ---------------
+    -- Technical Writing
+    ---------------
+
+    'christoomey/vim-titlecase';
+    -- 'junegunn/goyo.vim';
+    'rhysd/vim-grammarous';
+
+    -- Markdown Render
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        after = { 'nvim-treesitter' },
+        -- requires = { 'nvim-mini/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+        -- requires = { 'nvim-mini/mini.icons', opt = true }, -- if you use standalone mini plugins
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    };
 
     ---------------
     -- Aesthetics
     ---------------
 
     -- Tree view
-    use {
+    {
         'nvim-tree/nvim-tree.lua',
-        requires = {'nvim-tree/nvim-web-devicons'}
-    }
+        requires = {'nvim-tree/nvim-web-devicons'},
+    };
 
-    use 'lukas-reineke/indent-blankline.nvim'
-    use {
+    {
         'akinsho/bufferline.nvim',
-        tag = "v3.*",
+        -- tag = "v3.*",
         requires = 'nvim-tree/nvim-web-devicons'
-    }
+    };
 
     -- Theme
-    use 'Shatur/neovim-ayu'
-    use {
+    'Shatur/neovim-ayu';
+    {
         'nvim-lualine/lualine.nvim',
         requires = {
             'nvim-tree/nvim-web-devicons',
-            opt = true
-        }
-    }
-
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if packer_bootstrap then
-        require('packer').sync()
-    end
-end)
+            opt = true,
+        },
+    };
+}

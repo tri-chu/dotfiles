@@ -1,9 +1,41 @@
 #!/usr/bin/env bash
-for f in *\|*; do mv "$f" "$(echo "$f" | sed 's/|//g')"; done
-for f in *\"*; do mv "$f" "$(echo "$f" | sed 's/"//g')"; done
-for f in *\:*; do mv "$f" "$(echo "$f" | sed 's/://g')"; done
-for f in *\?*; do mv "$f" "$(echo "$f" | sed 's/?//g')"; done
-for f in *\./; do mv "$f" "$(echo "$f" | sed 's/\.//g')"; done
-for f in *\<*; do mv "$f" "$(echo "$f" | sed 's/<//g')"; done
-for f in *\>*; do mv "$f" "$(echo "$f" | sed 's/>//g')"; done
 
+replace=false ;
+
+while getopts 'r' flag; do
+  case "${flag}" in
+    r) replace=true ;;
+    *) echo "script usage: clean-sm-filenames [-r]" >&2
+       exit 1 ;;
+  esac
+done
+
+# Remove characters
+# < (less than)
+# > (greater than)
+# : (colon - sometimes works, but is actually NTFS Alternate Data Streams)
+# " (double quote)
+# / (forward slash)
+# \ (backslash)
+# | (vertical bar or pipe)
+# ? (question mark)
+# * (asterisk)
+if $replace; then
+  for f in *\|*; do mv "$f" "$(echo "$f" | sed 's/|/∣/g')"; done
+  for f in *\**; do mv "$f" "$(echo "$f" | sed 's/*/⁎/g')"; done
+  for f in *\"*; do mv "$f" "$(echo "$f" | sed 's/"/ˮ/g')"; done
+  for f in *\:*; do mv "$f" "$(echo "$f" | sed 's/:/⁚/g')"; done
+  for f in *\?*; do mv "$f" "$(echo "$f" | sed 's/?/ʔ/g')"; done
+  for f in *\./; do mv "$f" "$(echo "$f" | sed 's/\./܂/g')"; done
+  for f in *\<*; do mv "$f" "$(echo "$f" | sed 's/</‹/g')"; done
+  for f in *\>*; do mv "$f" "$(echo "$f" | sed 's/>/›/g')"; done
+else
+  for f in *\|*; do mv "$f" "$(echo "$f" | sed 's/|//g')"; done
+  for f in *\**; do mv "$f" "$(echo "$f" | sed 's/\*//g')"; done
+  for f in *\"*; do mv "$f" "$(echo "$f" | sed 's/"//g')"; done
+  for f in *\:*; do mv "$f" "$(echo "$f" | sed 's/://g')"; done
+  for f in *\?*; do mv "$f" "$(echo "$f" | sed 's/?//g')"; done
+  for f in *\./; do mv "$f" "$(echo "$f" | sed 's/\.//g')"; done
+  for f in *\<*; do mv "$f" "$(echo "$f" | sed 's/<//g')"; done
+  for f in *\>*; do mv "$f" "$(echo "$f" | sed 's/>//g')"; done
+fi

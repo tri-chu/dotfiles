@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/usr/bin/flatpak run org.mozilla.Thunderbird
+Name=thunderbird
+Comment=Thunderbird email application
+Type=Application
