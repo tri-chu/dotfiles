@@ -190,3 +190,10 @@ export PATH=$VCPKG_ROOT:$PATH
 
 # Android Command line Tools
 export PATH="$PATH:/opt/homebrew/share/android-commandlinetools"
+
+# bun completions
+[ -s "/Users/tri/.bun/_bun" ] && source "/Users/tri/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
