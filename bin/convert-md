@@ -4,3 +4,8 @@ for chapter in *.xhtml
 do
     pandoc --markdown-headings=atx --columns=100 -f html -t gfm -o ${chapter/xhtml/md} ${chapter}
 done
+
+for chapter in *.txt
+do
+    pandoc --markdown-headings=atx --columns=100 -t gfm -o ${chapter/txt/md} ${chapter}
+done

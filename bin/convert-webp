@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Default extension
+EXT="png"
+
+# Parse flags
+while getopts "j" opt; do
+  case ${opt} in
+    j )
+      EXT="jxl"
+      ;;
+    \? )
+      echo "Usage: $0 [-j]"
+      exit 1
+      ;;
+  esac
+done
+
+# Check for ImageMagick
+if ! command -v magick &> /dev/null; then
+    echo "Error: ImageMagick (magick) is not installed."
+    echo "Note: JPEG XL support requires ImageMagick 7+ with the JXL delegate."
+    exit 1
+fi
+
+echo "Converting .webp files to .$EXT..."
+
+# Find and convert
+find . -type f -name "*.webp" -print0 | while IFS= read -r -d '' file; do
+    # Remove .webp and add the chosen extension
+    target="${file%.webp}.$EXT"
+    echo "Processing: $file -> $target"
+    magick "$file" "$target"
+done
+
+echo "Conversion complete."
