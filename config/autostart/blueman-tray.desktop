@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=/bin/blueman-tray
-Name=blueman-tray
-Comment=bluetooth manager GUI applet
-Type=Application
