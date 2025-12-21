@@ -111,32 +111,6 @@ export PATH="$PATH:$HOME/bin"
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export ANDROID_HOME=/opt/homebrew/share/android-sdk
 export ANDROID_SDK_ROOT=/opt/homebrew/share/android-sdk
-export server_admin=/Users/tri/repo/niantic/reality/cloud/xrreleases/server-admin
-alias c8="cd ~/repo/code8"
-alias cdc8="cd ~/repo/code8"
-alias p8="cd ~/repo/prod8"
-alias cdp8="cd ~/repo/prod8"
-alias t8="cd ~/repo/tools8"
-alias cdt8="cd ~/repo/tools8"
-alias xrhome="cd ~/repo/code8/reality/cloud/xrhome"
-alias sd8="cd ~/repo/code8/reality/cloud/aws/lambda/studio-deploy"
-alias web8="cd ~/repo/web8"
-alias reinstallg8="brew reinstall g8 --HEAD"
-alias xsa="cd ~/repo/code8/reality/cloud/xrreleases/server-admin"
-alias cl="~/repo/code8/scripts/eslint-diff.js \$(git merge-base HEAD master)"   
-alias g8s="g8 status"
-alias gst="g8 status"
-alias g8c="g8 client"
-alias gc="g8 client"
-alias g8p="g8 patch"
-alias gp="g8 patch"
-alias gs="g8 sync"
-alias gsy="g8 sync"
-alias gsu="g8 sync && g8 update"
-alias gsv="g8 save"
-alias gup="g8 update"
-alias gmr="g8 mr"
-alias f="fastfetch"
 export PATH="$PATH:/usr/local/share/android-sdk/platform-tools"
 
 # Export GNUbin for GNU grep
@@ -166,20 +140,10 @@ unalias l
 # GPG setup
 export GPG_TTY=$(tty)
 
-# Crowdin
-export PATH="/opt/homebrew/opt/crowdin@3/bin:$PATH"
-
-# Set crowdin secret
-#export $(grep -v '^#' ~/.c8/crowdin.env | xargs)
-
 # fnm
 export PATH="/Users/trichu/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 alias nvm=fnm
-
-# python
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-source ~/xrhome/bin/activate
 
 # vcpkg
 export VCPKG_ROOT="$HOME/repo/vcpkg"
