@@ -3,6 +3,6 @@ Type=Application
 Version=1.0
 Name=element-desktop
 Comment=element-desktop startup script
-Exec=/usr/bin/element-desktop
+Exec=/usr/bin/element-desktop --password-store="gnome-libsecret"
 StartupNotify=false
 Terminal=false

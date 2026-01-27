@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Signal Desktop
+Comment=Signal startup script
+Exec=flatpak run org.signal.Signal
+X-GNOME-Autostart-enabled=true
