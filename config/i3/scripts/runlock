@@ -6,5 +6,6 @@
 # XScreensaver
 export XSECURELOCK_DISCARD_FIRST_KEYPRESS=0
 export XSECURELOCK_XSCREENSAVER_PATH=/usr/libexec/xscreensaver
+export XSECURELOCK_COMPOSITE_OBSCURER=0
 export XSECURELOCK_SAVER=saver_xscreensaver 
 env xsecurelock
