@@ -1,4 +1,4 @@
 [Desktop Entry]
-Exec=/usr/bin/tixati
-Name=tixati
+Exec=/usr/bin/deluge
+Name=deluge
 Type=Application
