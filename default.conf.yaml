@@ -24,6 +24,9 @@
     ~/bin:
         path: bin
         create: true
+    ~/.config/fastfetch:
+        path: config/fastfetch/
+        create: true
     ~/.config/i3:
         path: config/i3/
         create: true
