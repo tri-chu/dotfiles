@@ -2,39 +2,48 @@
     monitor = 0
     width = 384
     offset = 8x31
-    indicate_hidden = yes
+    show_indicators = false
     shrink = yes
     #transparency = 20
     separator_height = 0
     padding = 8
     horizontal_padding = 8
-    frame_width = 0
-    separator_color = foreground
+    frame_width = 2
     sort = yes
-    corner_radius = 8
+    idle_threshold = 90
+    markup = full
+    corner_radius = 4
     font = FiraCode Nerd Font 12
     vertical_alignment = top
     stack_duplicates = true
-    hide_duplicate_count = true 
+    hide_duplicate_count = false
+    format = "<b>%a|%s</b>\n%b"
     icon_position = left
     min_icon_size = 32
     max_icon_size = 48
+    sticky_history = true
+    history_length = 20
+    notification_limit = 0
     browser = /usr/bin/firefox -new-tab
+    frame_color = "#8aadf4"
+    separator_color= frame
+    highlight = "#8aadf4"
 
 [shortcuts]
     #close_all = mod4+space
 
 [urgency_low]
-    background = "#1f2430"
-    foreground = "#fafafa"
+    background = "#24273a"
+    foreground = "#cad3f5"
     timeout = 5
 
 [urgency_normal]
-    background = "#1f2430"
-    foreground = "#5CCFE6"
-    timeout = 5
+    background = "#24273a"
+    foreground = "#cad3f5"
+    timeout = 10
 
 [urgency_critical]
-    background = "#1f2430"
-    foreground = "#f28779"
-    timeout = 5
+    background = "#24273a"
+    foreground = "#cad3f5"
+    frame_color = "#f5a97f"
+    timeout = 15
