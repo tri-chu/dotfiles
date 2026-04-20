@@ -3,10 +3,10 @@
 # Display
 follow = mouse
 monitor = 0
-width = (0, 384)
-height = (0, 40)
+width = 384
+height = (0, 80)
 origin = top-right
-offset = (8, 31)
+offset = 8x31
 notification_limit = 6
 #transparency = 20
 show_indicators = false
