@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/usr/bin/flatpak run org.mozilla.Thunderbird
+Exec=/usr/bin/flatpak run org.mozilla.thunderbird_esr
 Name=thunderbird
 Comment=Thunderbird email application
 Type=Application
