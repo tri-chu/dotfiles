@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-replace=false ;
+replace=true ;
 
 while getopts 'r' flag; do
   case "${flag}" in
-    r) replace=true ;;
+    r) replace=false ;;
     *) echo "script usage: clean-sm-filenames [-r]" >&2
        exit 1 ;;
   esac
