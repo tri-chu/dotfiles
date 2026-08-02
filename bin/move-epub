@@ -2,19 +2,51 @@
 
 set -euo pipefail
 
-# 1. Check if target directory argument is provided
-if [ "$#" -lt 1 ]; then
-    echo "Usage: $0 <target_directory>"
+PRESERVE_TIME=false
+TARGET_DIR=""
+
+# Parse flags vs arguments
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -t|--time)
+      PRESERVE_TIME=true
+      shift
+      ;;
+    *)
+      TARGET_DIR="$1"
+      shift
+      ;;
+  esac
+done
+
+if [ -z "$TARGET_DIR" ]; then
+    echo "Usage: $0 [-t|--time] <target_directory>"
     exit 1
 fi
 
-TARGET_DIR="$1"
-
-# 2. Create the target directory if it doesn't already exist
+# Create target directory if it doesn't exist
 mkdir -p "$TARGET_DIR"
 
-# Resolve absolute path for the target directory to avoid self-moving issues
+# Resolve absolute path for target directory
 TARGET_DIR_ABS=$(cd "$TARGET_DIR" && pwd)
+
+# Base rsync options:
+# -r: recursive
+# -l: copy symlinks as symlinks
+# -p: preserve permissions
+# -g: preserve group
+# -o: preserve owner
+# (Notice -t / modification times is excluded by default)
+RSYNC_FLAGS="-rlpo --remove-source-files"
+
+if [ "$PRESERVE_TIME" = true ]; then
+    echo "Time preservation enabled."
+    RSYNC_FLAGS="$RSYNC_FLAGS -t"
+else
+    echo "Time preservation disabled (default)."
+    # --no-t explicitly tells rsync not to set modification times
+    RSYNC_FLAGS="$RSYNC_FLAGS --no-t"
+fi
 
 echo "Searching for directories containing .epub files..."
 
@@ -36,12 +68,10 @@ find . -type f -iname "*.epub" -print0 | while IFS= read -r -d '' file; do
 done | sort -u | while read -r dir_to_move; do
     echo "Syncing and overwriting: '$dir_to_move' -> '$TARGET_DIR_ABS/'"
     
-    # rsync flags:
-    # -a: archive mode (preserves permissions, timestamps, symlinks, etc.)
-    # --remove-source-files: deletes source files after successful copy
-    rsync -a --remove-source-files "$dir_to_move" "$TARGET_DIR_ABS/"
+    # Run rsync without failing on time modification
+    rsync $RSYNC_FLAGS "$dir_to_move" "$TARGET_DIR_ABS/"
     
-    # Clean up empty source directories left behind by --remove-source-files
+    # Clean up empty source directories left behind
     find "$dir_to_move" -type d -empty -delete 2>/dev/null || true
 done
 
