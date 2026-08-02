@@ -1,4 +1,9 @@
 [Desktop Entry]
-Exec=/usr/bin/discord
-Name=discord
 Type=Application
+Exec=/home/tri/.config/discord/app-1.0.145/Discord
+Hidden=false
+NoDisplay=false
+Name=Discord
+Icon=/home/tri/.config/discord/app-1.0.145/discord.png
+Comment=Text and voice chat for gamers.
+X-GNOME-Autostart-enabled=true
