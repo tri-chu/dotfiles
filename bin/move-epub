@@ -24,18 +24,25 @@ echo "Searching for directories containing .epub files..."
 find . -type f -iname "*.epub" -print0 | while IFS= read -r -d '' file; do
     dir=$(dirname "$file")
     
-    # Resolve absolute path of the directory containing the epub
+    # Resolve absolute path of directory containing .epub
     dir_abs=$(cd "$dir" && pwd)
     
-    # Skip if the directory is already inside the target directory
+    # Skip if directory is inside target destination
     if [[ "$dir_abs" == "$TARGET_DIR_ABS"* ]]; then
         continue
     fi
     
     echo "$dir_abs"
 done | sort -u | while read -r dir_to_move; do
-    echo "Moving: '$dir_to_move' -> '$TARGET_DIR_ABS/'"
-    mv "$dir_to_move" "$TARGET_DIR_ABS/"
+    echo "Syncing and overwriting: '$dir_to_move' -> '$TARGET_DIR_ABS/'"
+    
+    # rsync flags:
+    # -a: archive mode (preserves permissions, timestamps, symlinks, etc.)
+    # --remove-source-files: deletes source files after successful copy
+    rsync -a --remove-source-files "$dir_to_move" "$TARGET_DIR_ABS/"
+    
+    # Clean up empty source directories left behind by --remove-source-files
+    find "$dir_to_move" -type d -empty -delete 2>/dev/null || true
 done
 
 echo "Done!"
