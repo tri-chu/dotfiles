@@ -148,7 +148,8 @@ assign [class="slack"] $ws4
 assign [class="Discord"] $ws4
 assign [class="discord"] $ws4
 assign [class="Element"] $ws4
-assign [class="FluffyChat"] $ws4
+assign [class="Fluffychat"] $ws4
+assign [class="fluffychat"] $ws4
 assign [class="Signal"] $ws4
 assign [class="signal"] $ws4
 assign [class="Mail"] $ws4
@@ -286,4 +287,5 @@ exec xset s 300 5
 exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
 
 exec --no-startup-id picom -b &
+exec --no-startup-id dunst &
 exec --no-startup-id feh --recursive --bg-scale --randomize $HOME/Pictures/wallpapers &

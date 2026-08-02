@@ -144,3 +144,4 @@ export GTK_IM_MODULES=ibus
 export XMODIFIERS=@IM=ibus
 export QT_IM_MODULES=ibus
 . "$HOME/.cargo/env"
+. "/home/tric/.deno/env"
