@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# 1. Check if target directory argument is provided
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <target_directory>"
+    exit 1
+fi
+
+TARGET_DIR="$1"
+
+# 2. Create the target directory if it doesn't already exist
+mkdir -p "$TARGET_DIR"
+
+# Resolve absolute path for the target directory to avoid self-moving issues
+TARGET_DIR_ABS=$(cd "$TARGET_DIR" && pwd)
+
+echo "Searching for directories containing .epub files..."
+
+# 3. Find all distinct parent directories of .epub files
+# -type f -iname "*.epub": Find files ending in .epub (case-insensitive)
+# -print0 / read -d '': Handle directory names with spaces or special characters safely
+find . -type f -iname "*.epub" -print0 | while IFS= read -r -d '' file; do
+    dir=$(dirname "$file")
+    
+    # Resolve absolute path of the directory containing the epub
+    dir_abs=$(cd "$dir" && pwd)
+    
+    # Skip if the directory is already inside the target directory
+    if [[ "$dir_abs" == "$TARGET_DIR_ABS"* ]]; then
+        continue
+    fi
+    
+    echo "$dir_abs"
+done | sort -u | while read -r dir_to_move; do
+    echo "Moving: '$dir_to_move' -> '$TARGET_DIR_ABS/'"
+    mv "$dir_to_move" "$TARGET_DIR_ABS/"
+done
+
+echo "Done!"
