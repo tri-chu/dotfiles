@@ -148,6 +148,9 @@ assign [class="slack"] $ws4
 assign [class="Discord"] $ws4
 assign [class="discord"] $ws4
 assign [class="element"] $ws4
+assign [class="Element"] $ws4
+assign [class="Fluffychat"] $ws4
+assign [class="fluffychat"] $ws4
 assign [class="Signal"] $ws4
 assign [class="signal"] $ws4
 assign [class="Mail"] $ws4
@@ -159,6 +162,8 @@ assign [class="qbittorrent"] $ws5
 assign [class="qBittorrent"] $ws5
 assign [class="deluge"] $ws5
 assign [class="Deluge"] $ws5
+assign [class="qbittorrent"] $ws5
+assign [class="qBittorrent"] $ws5
 assign [class="krusader"] $ws5
 assign [class="clementine"] $ws6
 assign [class="Clementine"] $ws6
@@ -199,10 +204,10 @@ for_window [class="^.*"] border pixel 3
 ###### Screen Rotate #######
 ############################
 
-bindsym Ctrl+$mod+k exec "rotate" 
-bindsym Ctrl+$mod+j exec "rotate i"
-bindsym Ctrl+$mod+h exec "rotate l"
-bindsym Ctrl+$mod+l exec "rotate r"
+bindsym Ctrl+$mod+k exec "xrandr -o normal" 
+bindsym Ctrl+$mod+j exec "xrandr -o inverted"
+bindsym Ctrl+$mod+h exec "xrandr -o left"
+bindsym Ctrl+$mod+l exec "xrandr -o right" 
 
 ############################
 ######## Screen Cap ########
@@ -283,4 +288,5 @@ exec xset s 300 5
 exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
 
 exec --no-startup-id picom -b &
+exec --no-startup-id dunst &
 exec --no-startup-id feh --recursive --bg-scale --randomize $HOME/Pictures/wallpapers &

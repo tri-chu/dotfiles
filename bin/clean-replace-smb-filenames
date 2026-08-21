@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Sourcing runs it directly inside the current shell process
+source "$SCRIPT_DIR/clean-smb-filenames"
