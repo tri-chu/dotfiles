@@ -1,4 +1,4 @@
 [Desktop Entry]
-Exec=/bin/qbittorrent
-Name=qbittorrent
+Exec=/usr/bin/deluge
+Name=Deluge
 Type=Application
