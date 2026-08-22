@@ -1,29 +1,19 @@
 #!/usr/bin/env bash
 
-verbose=0
+perl -e '
+use File::Path qw(make_path);
+use File::Copy qw(move);
+use POSIX qw(strftime);
 
-# Parse command line options
-while getopts "v" opt; do
-  case "$opt" in
-    v) verbose=1 ;;
-    *) echo "Usage: $0 [-v]" >&2; exit 1 ;;
-  esac
-done
+my $verbose = grep { $_ eq "-v" } @ARGV;
 
-shopt -s nullglob
-
-for f in *.torrent; do
-    date=$(date +%F -r "$f")
-    y=${date:0:4}
-    m=${date:5:2}
-    d=${date:8:2}
-    target="$y/$m/$d"
-
-    mkdir -p "$target"
-
-    if [ "$verbose" -eq 1 ]; then
-      echo "Moving '$f' -> '$target/'"
-    fi
-    mv "$f" "$target"
-done
-
+for my $f (<*.torrent>) {
+    next unless -f $f;
+    my @st = stat($f);
+    my $target = strftime("%Y/%m/%d", localtime($st[9]));
+    
+    make_path($target);
+    print "Moving '\''$f'\'' -> '\''$target/'\''\n" if $verbose;
+    move($f, "$target/$f");
+}
+' -- "$@"
