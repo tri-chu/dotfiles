@@ -136,9 +136,6 @@ unalias g l
 # Enable fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Enable salmon
-alias salmon='/home/tri/.virtualenvs/ss/bin/python ~/src/smoked-salmon/run.py'
-
 ####################
 # Python Stuff
 ####################
@@ -157,3 +154,7 @@ pyenv activate default
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 . "/home/tri/.deno/env"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
